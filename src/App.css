@@ -96,3 +96,9 @@ button{
 .container {
   padding: 2px 16px;
 }
+.red{
+  background-color: rgb(221, 134, 134);
+}
+.blue{
+  background-color: deepskyblue;
+}

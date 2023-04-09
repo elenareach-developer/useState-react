@@ -4,6 +4,7 @@ import Count from './components/Count';
 import Layout from './components/Layout';
 import Quiz1 from './components/Quiz1';
 import Quiz2 from './components/Quiz2';
+import UpdateObject from './components/UpdateObject';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="hellohooks" element={<HelloHooks />} />
           <Route path="quiz1" element={<Quiz1 />} />
           <Route path="quiz2" element={<Quiz2 />} />
+          <Route path="object" element={<UpdateObject />} />
         </Route>
       </Routes>
     </BrowserRouter>

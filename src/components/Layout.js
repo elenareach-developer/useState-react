@@ -17,6 +17,9 @@ const Layout = () => {
           <li>
             <Link className="navTitle" to="/quiz2">Quiz#2</Link>
           </li>
+          <li>
+            <Link className="navTitle" to="/object">UpdateObject</Link>
+          </li>
         </ul>
       </nav>
 
