@@ -15,7 +15,7 @@ const UpdateObject=()=>{
       }
     
     return( 
-        <div className={"boxContainer cardContainer "+car.color}>
+        <div className={"boxContainer cardContainer " + car.color}>
             <div className="card dark">
                 <div className="container light">
                     <div className="title titleColor">
