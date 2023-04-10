@@ -3,13 +3,14 @@ import React , {useState} from "react";
 const Count=()=>{
     const [count, setCount]  = useState(0 );
 
-    const decrimentCount=()=>{
-        setCount(previousState=>previousState -1);
-        setCount(previousState=>previousState -1);    
+    const decrimentCount=()=>{  
+        setCount(previoseState=>previoseState-1);
+        setCount(previoseState=>previoseState-1);
+
     }
 
     const incrementCount=()=>{
-        setCount(previousState=>previousState +1);
+        setCount(count+1);
     }
 
     return( 

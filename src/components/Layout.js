@@ -12,13 +12,16 @@ const Layout = () => {
             <Link className="navTitle" to="/count">Count</Link>
           </li>
           <li>
+            <Link className="navTitle" to="/object">UpdateObject</Link>
+          </li>
+          <li>
             <Link className="navTitle" to="/quiz1">Quiz#1</Link>
           </li>
           <li>
             <Link className="navTitle" to="/quiz2">Quiz#2</Link>
           </li>
           <li>
-            <Link className="navTitle" to="/object">UpdateObject</Link>
+            <Link className="navTitle" to="/quiz3">Quiz#3</Link>
           </li>
         </ul>
       </nav>

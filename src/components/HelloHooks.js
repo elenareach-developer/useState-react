@@ -1,11 +1,11 @@
-import React , {useState}from "react";
+import React, {useState} from "react";
 
 const HelloHooks=()=>{
-    const [title,setTitle] = useState( "Hello Hooks");
-   
 
-    let handleOnClick = ()=>{
-        setTitle( "I know about hooks!");
+   const [title,setTitle] =  useState("Hello Hooks");
+
+    const handleOnClick = ()=>{
+        setTitle("I know about hooks!");
     }
 
     return(  <div className="boxContainer cardContainer">

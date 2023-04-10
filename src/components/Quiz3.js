@@ -1,6 +1,6 @@
 import React , {useState} from "react";
 
-const UpdateObject=()=>{
+const Quiz3=()=>{
     const [car, setCar] = useState({
         brand: "Ford",
         model: "Mustang",
@@ -9,16 +9,18 @@ const UpdateObject=()=>{
       });
     
       const updateColor = () => {
-        setCar(previoseState=>{
-            return {...previoseState, color: "blue"};
-        })
+       //update setCar with color 
+        
       }
     
     return( 
-        <div className={"boxContainer cardContainer " + car.color}>
+        //applay color for the container
+        //<div className={"boxContainer cardContainer quizColor" + car.color}>
+        <div className="boxContainer cardContainer quizColor ">
             <div className="card dark">
                 <div className="container light">
                     <div className="title titleColor">
+                            <span>Test:</span>
                             <h1>My {car.brand}</h1>
                     </div>
                     <p>
@@ -31,4 +33,4 @@ const UpdateObject=()=>{
             </div>
             </div>);
 }
-export default UpdateObject;
+export default Quiz3;
