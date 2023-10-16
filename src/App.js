@@ -11,7 +11,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App cardContainer">
+    <div className="flex flex-col gap-20 items-center">
     <BrowserRouter>
     <Routes>
         <Route path="/" element={<Layout/>}>

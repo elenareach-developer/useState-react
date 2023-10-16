@@ -41,7 +41,6 @@ li{
   justify-content: center;
   background-color: rgb(175, 215, 33);
   padding: 20px;
-  margin-top: 150px;
 
 }
 .quizColor{
@@ -78,12 +77,10 @@ li{
   color:rgb(89, 26, 26);
 }
 h1{
-  padding: 25px;
   color:rgb(89, 26, 26);
   text-decoration: underline;
 }
 .bottom{
-  margin-top: 50px;
   text-align: center;
 }
 .dark{
