@@ -1,8 +1,19 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
+
 
 const Layout = (props) => {
   const currentPageClass = "bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
   const regularPageClass = "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+  const menu  = [
+    {path:"/hellohooks", title:"HelloHooks"},
+    {path:"/count", title:"Count"},
+    {path:"/object", title:"UpdateObject"},
+    {path:"/quiz1", title:"Quiz#1"},
+    {path:"/quiz2", title:"Quiz#2"},
+    {path:"/quiz3", title:"Quiz#3"}
+
+  ]
+  const location = useLocation()
   return (
     <>
 
@@ -29,14 +40,7 @@ const Layout = (props) => {
         </div>
         <div className="hidden sm:ml-6 sm:block">
           <div className="flex space-x-4">
-           
-            <Link to="/hellohooks" className={currentPageClass} >HelloHooks</Link>
-            <Link to="/count" className={regularPageClass}>Count</Link>
-            <Link to="/object" className={regularPageClass}>UpdateObject</Link>
-            <Link to="/quiz1" className={regularPageClass}>Quiz#1</Link>
-            <Link to="/quiz2" className={regularPageClass}>Quiz#2</Link>
-            <Link to="/quiz3" className={regularPageClass}>Quiz#3</Link>
-
+          {menu.map((el,item)=><Link to={el.path} className={el.path==location.pathname?currentPageClass:regularPageClass}>{el.title}</Link>)}
           </div>
         </div>
       </div>
@@ -65,47 +69,11 @@ const Layout = (props) => {
 
   <div className="sm:hidden" id="mobile-menu">
     <div className="space-y-1 px-2 pb-3 pt-2"> 
-      <Link to="/hellohooks" className={currentPageClass} >HelloHooks</Link>
-      <Link to="/count" className={regularPageClass}>Count</Link>
-      <Link to="/object" className={regularPageClass}>UpdateObject</Link>
-      <Link to="/quiz1" className={regularPageClass}>Quiz#1</Link>
-      <Link to="/quiz2" className={regularPageClass}>Quiz#2</Link>
-      <Link to="/quiz3" className={regularPageClass}>Quiz#3</Link>
+    {menu.map((el,item)=><Link to={el.path} className={el.path==location.pathname?currentPageClass:regularPageClass}>{el.title}</Link>)}
+
     </div>
   </div>
 </nav>
-
-
-
-
-
-
-
-
-{/*}
-      <nav>
-        <ul>
-          <li>
-            <Link className="navTitle" to="/hellohooks">HelloHooks</Link>
-          </li>
-          <li>
-            <Link className="navTitle" to="/count">Count</Link>
-          </li>
-          <li>
-            <Link className="navTitle" to="/object">UpdateObject</Link>
-          </li>
-          <li>
-            <Link className="navTitle" to="/quiz1">Quiz#1</Link>
-          </li>
-          <li>
-            <Link className="navTitle" to="/quiz2">Quiz#2</Link>
-          </li>
-          <li>
-            <Link className="navTitle" to="/quiz3">Quiz#3</Link>
-          </li>
-        </ul>
-      </nav>
-  {*/}
       <Outlet />
     </>
   )

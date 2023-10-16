@@ -6,12 +6,11 @@ import Quiz1 from './components/Quiz1';
 import Quiz2 from './components/Quiz2';
 import Quiz3 from './components/Quiz3';
 import UpdateObject from './components/UpdateObject';
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="flex flex-col gap-20 items-center">
+    <div className="flex flex-col gap-20 items-center bg-gray-100">
     <BrowserRouter>
     <Routes>
         <Route path="/" element={<Layout/>}>

@@ -1,25 +1,36 @@
 import React, {useState} from "react";
+import {BlueButton} from "../utils/styleConsts"
 
 const HelloHooks=()=>{
-
-   const [title,setTitle] =  useState("Hello Hooks");
+   const titleArr = ["Hello Hooks", "I know about hooks!"]
+   const [title,setTitle] =  useState(titleArr[0]);
+   const [hide, setHide] = useState(false);
 
     const handleOnClick = ()=>{
-        setTitle("I know about hooks!");
+        setTitle(titleArr[1]);
+        setHide(true)
     }
 
-    return(  <div className="boxContainer cardContainer">
-            <div className="card">
-                <div className="container">
-                    <div className="title">
-                            <h1>{title}</h1>
-                    </div>
-                    
-                    <div className="bottom">
-                        <button onClick={handleOnClick}>Change title</button>
-                    </div>
-                </div>
+    return(  
+    
+    <>
+    <header class="bg-white shadow">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">{title}</h1>
+        </div>
+    </header>
+    <main>
+        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">       
+            <div className="bottom">
+                <button className={BlueButton} onClick={handleOnClick}>Change title</button>
             </div>
-            </div>);
+                {hide&&<div>Before: {titleArr[0]} --- After: {titleArr[1]}</div>}
+        </div>
+    </main>
+    </>
+    
+    
+    
+);
 }
 export default HelloHooks;
