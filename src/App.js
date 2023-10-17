@@ -23,6 +23,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    <div className='p-10'></div>
     </div>
   );
 }
