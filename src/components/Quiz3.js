@@ -20,10 +20,10 @@ const Quiz3=()=>{
         //applay color for the container
         // <div className={"p-28 flex flex-col gap-8 justify-center max-w-7xl "+ bgColor}>
         <>
-        <div className={"p-28 flex flex-col gap-8 justify-center max-w-7xl "+ bgColor}>
+        <div className={"p-28 flex flex-col gap-8 justify-center  w-2/3 "+ bgColor}>
             <header className="bg-white shadow">
                <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                   <h1 className="text-3xl font-bold tracking-tight text-gray-900">My {car.brand}</h1>
+                   <h1 className="text-3xl font-bold tracking-tight text-gray-900 text-center">My {car.brand}</h1>
                </div>
            </header>
            <main>
